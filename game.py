@@ -1,5 +1,7 @@
 #this is the hilo game
 import random as r
+import time
+
 
 player_points = int(300)
 
@@ -24,13 +26,26 @@ def card_guesses(player_points):
             print()
 
             if low_or_high >= next_card:
+                print("Answer in:")
+                print("3")
+                time.sleep(1)
+                print("2")
+                time.sleep(1)
+                print("1")
+                time.sleep(1)
                 # if the player guesses higher and the next card is higher than the old card 
                 player_points += int(100)
-                print("low or high is greater than next card!")
                 print(f"That is correct! You now have {player_points} points.")
                 print()
             elif low_or_high < next_card:
                 #if the player guesses higher and the next card is lesser than the old card
+                print("Answer in:")
+                print("3")
+                time.sleep(1)
+                print("2")
+                time.sleep(1)
+                print("1")
+                time.sleep(1)
                 player_points -= int(75)
                 print(f"That is incorrect. You now have {player_points} points.")
                 print("low or high is less than next card!")
@@ -45,13 +60,27 @@ def card_guesses(player_points):
             print()
 
             if low_or_high < next_card:
-                # if the player guesses lower and the next card is lower than the old card 
+                # if the player guesses lower and the next card is lower than the old card
+                print("Answer in:")
+                print("3")
+                time.sleep(1)
+                print("2")
+                time.sleep(1)
+                print("1")
+                time.sleep(1)
                 player_points += int(100)
                 print("low or high is greater than next card!")
                 print(f"That is correct! You now have {player_points} points.")
                 print()
             elif low_or_high > next_card:
                 #if the player guesses lower and the next card is higher than the old card
+                print("Answer in:")
+                print("3")
+                time.sleep(1)
+                print("2")
+                time.sleep(1)
+                print("1")
+                time.sleep(1)
                 player_points -= int(75)
                 print(f"That is incorrect. You now have {player_points} points.")
                 print("low or high is less than next card!")
