@@ -2,7 +2,6 @@
 import random as r
 import time
 import sys
-import typing
 
 def typingPrint(text):
   for character in text:
@@ -11,6 +10,20 @@ def typingPrint(text):
     time.sleep(0.03)
 
 player_points = int(300)
+
+
+class PlayerPoints:
+    def __init__(self):
+        self.points = 300
+
+    def add(self):
+        self.points += 100
+    
+    def subtract(self):
+        self.points -= 75
+
+player_points_int = PlayerPoints()
+
 
 typingPrint("Welcome to hilo!")
 print()
@@ -59,7 +72,9 @@ def card_guesses(player_points):
                 typingPrint(f"The next card was {next_card}")
                 print()
                 # if the player guesses higher and the next card is higher than the old card 
-                player_points += int(100)
+                #player_points += int(100)
+                player_points.add()
+
                 typingPrint(f"That is correct! You now have {player_points} points.")
                 print()
 
